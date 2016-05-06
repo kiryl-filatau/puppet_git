@@ -1,0 +1,21 @@
+[root@puppetagent6 ~]# puppet agent -t
+Info: Retrieving pluginfacts
+Info: Retrieving plugin
+Info: Loading facts
+Info: Caching catalog for puppetagent6.minsk.epam.com
+Info: Applying configuration version '1462551853'
+Notice: /Stage[main]/Java/Package[java-1.6.0-openjdk-devel.x86_64]/ensure: created
+Notice: /Stage[main]/Unzip/Package[unzip]/ensure: created
+Notice: /Stage[main]/Jboss::Install/File[jboss_link]/ensure: created
+Notice: /Stage[main]/Jboss::Install/Puppi::Netinstall[netinstall_jboss]/Exec[Extract jboss-as-distribution-6.1.0.Final.zip from /var/tmp - netinstall_jboss]/returns: executed successfully
+Info: /Stage[main]/Jboss::Install/Puppi::Netinstall[netinstall_jboss]/Exec[Extract jboss-as-distribution-6.1.0.Final.zip from /var/tmp - netinstall_jboss]: Scheduling refresh of Exec[PostExtract jboss-as-distribution-6.1.0.Final.zip in /opt - netinstall_jboss]
+Info: /Stage[main]/Jboss::Install/Puppi::Netinstall[netinstall_jboss]/Exec[Extract jboss-as-distribution-6.1.0.Final.zip from /var/tmp - netinstall_jboss]: Scheduling refresh of Exec[Chown jboss-as-distribution-6.1.0.Final.zip in /opt - netinstall_jboss]
+Notice: /Stage[main]/Jboss::Install/Puppi::Netinstall[netinstall_jboss]/Exec[Chown jboss-as-distribution-6.1.0.Final.zip in /opt - netinstall_jboss]: Triggered 'refresh' from 1 events
+Notice: /Stage[main]/Jboss::Install/Puppi::Netinstall[netinstall_jboss]/Exec[PostExtract jboss-as-distribution-6.1.0.Final.zip in /opt - netinstall_jboss]: Triggered 'refresh' from 1 events
+Notice: /Stage[main]/Jboss::Service/File[jboss.init]/ensure: created
+Info: /Stage[main]/Jboss::Service/File[jboss.init]: Scheduling refresh of Service[jboss]
+Notice: /Stage[main]/Jboss::Service/Service[jboss]/ensure: ensure changed 'stopped' to 'running'
+Info: /Stage[main]/Jboss::Service/Service[jboss]: Unscheduling refresh on Service[jboss]
+Notice: /Stage[main]/Deploy/File[/opt/jboss-6.1.0.Final/server/default/deploy/tesweb.war]/ensure: defined content as '{md5}1b0b620a376ea2673ac5d2a0de051afd'
+Notice: Finished catalog run in 49.23 seconds
+[root@puppetagent6 ~]# 
